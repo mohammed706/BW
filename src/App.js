@@ -5,19 +5,32 @@ import Footer from "./components/footer/footer";
 import Touch from "./components/get-in-touch/touch";
 import Landing from "./components/landing/landing";
 import NavBar from "./components/navbar/navbar";
-import Projects from "./components/projects/projects";
+import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/services";
 import "./main.css";
+import { Switch, Route } from "react-router-dom";
+import Projects from "./components/projects/Projects";
+
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <Landing />
-      <Doing />
-      <About />
-      <Services />
-      <Projects />
-      <Touch />
+      <Switch>
+        <Route exact path="/">
+          <Landing />
+          <Doing />
+          <About />
+
+          <Services />
+
+          <Portfolio />
+          <Touch />
+        </Route>
+        <Route path="/projects">
+          <Projects />
+        </Route>
+      </Switch>
+
       <Footer />
     </div>
   );

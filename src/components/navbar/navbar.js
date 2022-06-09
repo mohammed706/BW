@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../images/logo/bw-logo.png";
+import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg sticky-top">
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             <img src={logo} width="100px" alt="Logo" />
-          </a>
+          </Link>
 
           <button
             className="navbar-toggler"
@@ -23,13 +24,13 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="main">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a
+                <Link
                   className="nav-link p-2 p-lg-3 text-black-50 active"
                   aria-current="page"
-                  href="#"
+                  to="/"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a
@@ -42,7 +43,7 @@ const NavBar = () => {
               <li className="nav-item">
                 <a
                   className="nav-link p-2 p-lg-3 text-black-50"
-                  href="#latest-projects"
+                  href="#portfolio"
                 >
                   Portfolio
                 </a>
@@ -58,7 +59,7 @@ const NavBar = () => {
               <li className="nav-item">
                 <a
                   className="nav-link p-2 p-lg-3 text-black-50"
-                  href="#get-in-touch"
+                  href="#contact"
                 >
                   Contact
                 </a>

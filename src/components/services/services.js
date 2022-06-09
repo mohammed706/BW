@@ -1,13 +1,51 @@
 import image1 from "../../images/icons/phone-icon.png";
 import image2 from "../../images/icons/painting.png";
-import image3 from "../../images/icons/doc.png";
+import image3 from "../../images/icons/server.svg";
 import image4 from "../../images/icons/phone-icon.png";
 import image5 from "../../images/backgrounds/services-bg.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Col } from "reactstrap";
 import "../../main.css";
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+const data = [
+  {
+    id: 1,
+    image: `${image1}`,
+    title: "Web and App Development",
+    desc: "Exceptional quality and on time delivery Quality first and foremost.Through extensive inspection and testing"
+  },
+  {
+    id: 2,
+    image: `${image2}`,
+    title: "Digital Marketing Services",
+    desc: "We are committed to monitoring all solutions according to clear criteria and indicators to measure"
+  },
+  {
+    id: 3,
+    image: `${image4}`,
+    title: "Consulting",
+    desc: "BW offers a wide range of consulting services for various types of companies and at all management levels,Making strategic plans "
+  },
+  {
+    id: 4,
+    image: `${image4}`,
+    title: "User Interface Design",
+    desc: "Providing attractive designs that are compatible with the technical environment has undoubtedly become an indispensable thing in the world of web and smartphone applications"
+  },
+  {
+    id: 5,
+    image: `${image4}`,
+    title: "graphic design",
+    desc: "At BW, we provide all design services accompanying business growth at all stages from inception to the jubilee celebrations. We work in an integrated manner with all digital platforms"
+  },
+  {
+    id: 6,
+    image: `${image4}`,
+    title: "DevOps Hosting Services",
+    desc: "  We save and store website data completely on our large mainframe computers with special specifications and high internet speed, and we work under DevOps system to automate operations quickly"
+  }
+];
 const Services = () => {
   return (
     <>
@@ -20,18 +58,51 @@ const Services = () => {
             </h1>
           </div>
 
-          <Router className="grid-container">
+          <div className="grid-container">
+            <div className="row gx-4 gy-5">
+              {data &&
+                data.map((item) => (
+                  <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div className="card shadow-lg" key={item.id}>
+                      <div className="card-body">
+                        <h5 className="card-title mb-4">
+                          <img
+                            src={item.image}
+                            className="me-2"
+                            alt={item.title}
+                          />
+                          {item.title}
+                        </h5>
+                        <p className="card-text gray-text">
+                          {item.desc.substring(0, 100)}...
+                        </p>
+                        <Link
+                          to="#"
+                          className="btn card-button"
+                          // style={{ font-size :"14px"}}
+                        >
+                          Learn More
+                          <i className="bi bi-arrow-right mx-1 dark-blue"></i>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
+
+          {/* <div className="grid-container">
             <div className="row gx-4 gy-5">
               <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                 <div className="card shadow-lg">
                   <div className="card-body">
                     <h5 className="card-title mb-4">
                       <img src={image1} className="me-2" alt="Mobile icon" />
-                      Software Development
+                      Website and Application Development:
                     </h5>
                     <p className="card-text gray-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Omnis nam, eaque deserunt pariatur
+                      Exceptional quality and on time delivery Quality first and
+                      foremost. Through extensive inspection and testing...
                     </p>
                     <Link
                       to="#"
@@ -46,15 +117,15 @@ const Services = () => {
               </div>
 
               <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                <div className="card shadow-lg">
+                <div className="card shadow-lg ">
                   <div className="card-body">
                     <h5 className="card-title mb-4">
                       <img src={image2} className="me-2" alt="Mobile icon" />
-                      Software Development
+                      Digital Marketing Services:
                     </h5>
                     <p className="card-text gray-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Omnis nam, eaque deserunt pariatur
+                      We are committed to monitoring all solutions according to
+                      clear criteria and indicators to measure ...
                     </p>
                     <Link
                       to="#"
@@ -73,11 +144,12 @@ const Services = () => {
                   <div className="card-body">
                     <h5 className="card-title mb-4">
                       <img src={image3} className="me-2" alt="Mobile icon" />
-                      Software Development
+                      Consulting
                     </h5>
                     <p className="card-text gray-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Omnis nam, eaque deserunt pariatur
+                      BW offers a wide range of consulting services for various
+                      types of companies and at all management levels,Making
+                      strategic plans ...
                     </p>
                     <Link
                       to="#"
@@ -96,11 +168,13 @@ const Services = () => {
                   <div className="card-body">
                     <h5 className="card-title mb-4">
                       <img src={image4} className="me-2" alt="Mobile icon" />
-                      Software Development
+                      User Interface Design
                     </h5>
                     <p className="card-text gray-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Omnis nam, eaque deserunt pariatur
+                      Providing attractive designs that are compatible with the
+                      technical environment has undoubtedly become an
+                      indispensable thing in the world of web and smartphone
+                      applications...
                     </p>
                     <Link
                       to="#"
@@ -119,11 +193,13 @@ const Services = () => {
                   <div className="card-body">
                     <h5 className="card-title mb-4">
                       <img src={image2} className="me-2" alt="Mobile icon" />
-                      Software Development
+                      graphic design
                     </h5>
                     <p className="card-text gray-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Omnis nam, eaque deserunt pariatur
+                      At BW, we provide all design services accompanying
+                      business growth at all stages from inception to the
+                      jubilee celebrations. We work in an integrated manner with
+                      all digital platforms...
                     </p>
                     <Link
                       to="#"
@@ -142,11 +218,13 @@ const Services = () => {
                   <div className="card-body">
                     <h5 className="card-title mb-4">
                       <img src={image3} className="me-2" alt="Mobile icon" />
-                      Software Development
+                      DevOps Hosting Services
                     </h5>
                     <p className="card-text gray-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Omnis nam, eaque deserunt pariatur
+                      We save and store website data completely on our large
+                      mainframe computers with special specifications and high
+                      internet speed, and we work under DevOps system to
+                      automate operations quickly...
                     </p>
                     <Link
                       to="#"
@@ -160,7 +238,7 @@ const Services = () => {
                 </div>
               </div>
             </div>
-          </Router>
+          </div> */}
           <img className="services-bg" src={image5} />
         </div>
       </section>

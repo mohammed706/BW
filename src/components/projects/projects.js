@@ -1,56 +1,77 @@
-import Image1 from "../../images/icons/date-icon.png";
-import Image2 from "../../images/latest-projects/img-1.png";
-import Image3 from "../../images/latest-projects/img-2.png";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import image1 from "../../images/latest-projects/1.jpg";
+import image2 from "../../images/latest-projects/2.jpg";
+import image3 from "../../images/latest-projects/3.jpg";
+import image4 from "../../images/latest-projects/4.jpg";
+import image5 from "../../images/latest-projects/5.jpg";
 const Projects = () => {
+  const data = [
+    {
+      id: 1,
+      image: `${image1}`,
+      name: "Cadeau Boutique"
+    },
+    { id: 2, image: `${image2}`, name: "Capriani Gelato" },
+    { id: 3, image: `${image3}`, name: "Casakai Restaurant" },
+    { id: 4, image: `${image4}`, name: "Smart Kids " },
+    { id: 5, image: `${image5}`, name: "Iwood" }
+  ];
+  const ShowProjects = () => {
+    return (
+      <>
+        {data &&
+          data.map((item) => {
+            return (
+              <>
+                <div className="col-md-3 col-sm-6 mb-4">
+                  <div
+                    className="card h-100 text-center p-4 shadow"
+                    key={item.id}
+                  >
+                    <img
+                      src={item.image}
+                      className="card-img-top"
+                      alt={item.name}
+                      height="250px"
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title mb-0">{item.name}</h5>
+
+                      <NavLink
+                        to="/projects"
+                        className="btn rounded-pill main-btn mt-3"
+                      >
+                        {" "}
+                        View More
+                      </NavLink>
+                    </div>
+                  </div>
+                </div>
+              </>
+            );
+          })}
+      </>
+    );
+  };
   return (
-    <section id="latest-projects" className="my-4">
+    <div>
       <div className="container">
-        <div className="latest-pro-header text-center">
-          <p className="mb-0 gray-text">Introduction</p>
-          <h1>
-            {" "}
-            <span className="dark-blue">Latest</span>{" "}
-            <span className="gray-text">Projects</span>{" "}
+        <div className="projects-header text-center mx-auto my-5">
+          <h1 className="projects-title mb-2">
+            Our <span className="gray-text">Projects</span>
           </h1>
-        </div>
-        <div className="row">
-          <div className="col-xl-4 col-md-6 col-sm-12">
-            <h3 className="gray-text">Cadeau Boutique</h3>
-            <p className="dark-blue my-1">
-              <img src={Image1} className="mx-2" alt="" />
-              <span style={{ "vertical-align": "middle" }}>2022</span>
-            </p>
-            <p className="my-3 latest-pro-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-              officiis praesentium asperiores.
-            </p>
-            <a
-              href="#"
-              className="btn blue-color"
-              style={{ "font-size": "14px" }}
-            >
-              Learn More
-              <i className="bi bi-arrow-right mx-1 dark-blue"></i>
-            </a>
-          </div>
-
-          <div className="col-xl-4 col-md-6 col-sm-12">
-            <div className="position-relative">
-              <img className="w-100" src={Image2} alt="" />
-              <img
-                className="position-absolute top-0 end-0"
-                src={Image3}
-                style={{ width: "80px" }}
-              />
-            </div>
-          </div>
-
-          <div className="col-xl-4 col-sm-12 cadeau">
-            <img className="w-100" src={Image3} style={{ height: "70%" }} />
-          </div>
+          <h6 className="gray-text">
+            Not Only Partners But a Set of Delightful Success Stories
+            <br />
+            We are More Than Happy to have Them as Part of our Family and Wish
+            Them a an Everlasting Great Success
+          </h6>
         </div>
       </div>
-    </section>
+      <div className="row justify-content-center">{<ShowProjects />}</div>
+    </div>
   );
 };
+
 export default Projects;
