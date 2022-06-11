@@ -24,7 +24,12 @@ const About = () => {
                 <img className="bottom-img shadow" src={Image3} alt="" />
               </div>
             </Col>
-            <Col md={6} sm={12} className="px-3" data-aos="fade-down">
+            <Col
+              md={6}
+              sm={12}
+              className="desc-section px-3"
+              data-aos="fade-down"
+            >
               <div className="title-container my-auto">
                 <p className="mb-0">Introduction</p>
                 <h1 className="about-us-title">

@@ -14,24 +14,20 @@ import Projects from "./components/projects/Projects";
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Switch>
-        <Route exact path="/">
-          <Landing />
-          <Doing />
-          <About />
-
-          <Services />
-
-          <Portfolio />
-          <Touch />
-        </Route>
-        <Route path="/projects">
-          <Projects />
-        </Route>
-      </Switch>
-
-      <Footer />
+      <Route exact path="/">
+        <NavBar />
+        <Landing />
+        <Doing />
+        <About />
+        <Services />
+        <Portfolio />
+        <Touch />
+        <Footer />
+      </Route>
+      <Route path="/projects">
+        <Projects />
+        <Footer />
+      </Route>
     </div>
   );
 }

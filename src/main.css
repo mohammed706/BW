@@ -138,7 +138,7 @@ ul{
     left: 1%;
 }
 .about-us-title {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 }
 .about-us-text h5 {
     font-size: 20px;
@@ -163,6 +163,9 @@ ul{
     }
     .about-imgs .bottom-img {
         width: 260px;
+    }
+    .desc-section{
+        margin-top: 20px;
     }
 }
 /* Services  */

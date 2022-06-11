@@ -13,37 +13,37 @@ const data = [
     id: 1,
     image: `${image1}`,
     title: "Web and App Development",
-    desc: "Exceptional quality and on time delivery Quality first and foremost.Through extensive inspection and testing"
+    desc: "Exceptional quality and on time delivery Quality first and foremost.Through extensive inspection and testing..."
   },
   {
     id: 2,
     image: `${image2}`,
     title: "Digital Marketing Services",
-    desc: "We are committed to monitoring all solutions according to clear criteria and indicators to measure"
+    desc: "We are committed to monitoring all solutions according to clear criteria and indicators to measure..."
   },
   {
     id: 3,
     image: `${image4}`,
     title: "Consulting",
-    desc: "BW offers a wide range of consulting services for various types of companies and at all management levels,Making strategic plans "
+    desc: "BW offers a wide range of consulting services for various types of companies and at all management levels... "
   },
   {
     id: 4,
     image: `${image4}`,
     title: "User Interface Design",
-    desc: "Providing attractive designs that are compatible with the technical environment has undoubtedly become an indispensable thing in the world of web and smartphone applications"
+    desc: "Providing attractive designs that are compatible with the technical environment has undoubtedly become an indispensable thing in the world..."
   },
   {
     id: 5,
-    image: `${image4}`,
+    image: `${image2}`,
     title: "graphic design",
-    desc: "At BW, we provide all design services accompanying business growth at all stages from inception to the jubilee celebrations. We work in an integrated manner with all digital platforms"
+    desc: "At BW, we provide all design services accompanying business growth at all stages from inception to the jubilee celebrations..."
   },
   {
     id: 6,
     image: `${image4}`,
     title: "DevOps Hosting Services",
-    desc: "  We save and store website data completely on our large mainframe computers with special specifications and high internet speed, and we work under DevOps system to automate operations quickly"
+    desc: "  We save and store website data completely on our large mainframe computers with special specifications and high internet speed..."
   }
 ];
 const Services = () => {
@@ -73,17 +73,7 @@ const Services = () => {
                           />
                           {item.title}
                         </h5>
-                        <p className="card-text gray-text">
-                          {item.desc.substring(0, 100)}...
-                        </p>
-                        <Link
-                          to="#"
-                          className="btn card-button"
-                          // style={{ font-size :"14px"}}
-                        >
-                          Learn More
-                          <i className="bi bi-arrow-right mx-1 dark-blue"></i>
-                        </Link>
+                        <p className="card-text gray-text">{item.desc}</p>
                       </div>
                     </div>
                   </div>
