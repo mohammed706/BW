@@ -22,12 +22,11 @@ function App() {
         <Services />
         <Portfolio />
         <Touch />
-        <Footer />
       </Route>
       <Route path="/projects">
         <Projects />
-        <Footer />
       </Route>
+      <Footer />
     </div>
   );
 }
