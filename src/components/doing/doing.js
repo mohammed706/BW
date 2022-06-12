@@ -7,6 +7,7 @@ import Svg1 from "../../images/SVG/cadeaulogo.svg";
 import Svg2 from "../../images/SVG/capriani.svg";
 import Svg3 from "../../images/SVG/casalogo.svg";
 import Svg4 from "../../images/SVG/smartkids.svg";
+import Img5 from "../../images/logo/pg.png";
 // images
 import Image1 from "../../images/doing/img-1.png";
 import Image2 from "../../images/doing/img-2.png";
@@ -33,6 +34,9 @@ const Doing = () => {
               </div>
               <div className="col-xl-3 col-md-3 col-sm-6">
                 <img className="img image4" src={Svg4} width="200px" alt="" />
+              </div>
+              <div className="col-xl-12 col-md-12 col-sm-6">
+                <img className="img image4" src={Img5} width="100px" alt="" />
               </div>
             </div>
           </div>

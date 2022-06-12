@@ -165,7 +165,7 @@ ul{
         width: 260px;
     }
     .desc-section{
-        margin-top: 20px;
+        margin-top: 40px !important;
     }
 }
 /* Services  */
