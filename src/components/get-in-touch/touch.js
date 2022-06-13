@@ -50,7 +50,10 @@ const Touch = () => {
     <section id="contact" className="">
       <div className="container">
         <div className="row">
-          <div className="col-xl-6 col-md-6 col-sm-12" data-aos="zoom-in-up">
+          <div
+            className="col-xl-6 col-md-6 col-sm-12 content-sec"
+            data-aos="zoom-in-up"
+          >
             <div className="get-in-touch-title mb-5">
               <p className="mb-0 gray-text">Introduction</p>
               <h1>

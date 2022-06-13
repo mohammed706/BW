@@ -106,8 +106,14 @@ ul{
     line-height: 50px;
     color: #585E70;
 }
+.image1{
+    padding-top: 13px;
+}
 .image2 {
     padding-top: 50px !important;
+}
+.image3 {
+    padding-top: 10px !important;
 }
 .image4 {
     padding-top: 35px;
@@ -146,6 +152,19 @@ ul{
 }
 .about-us-text p {
     font-size: 14px;
+}
+/* "" */
+@media screen and (min-device-width: 768px) and (max-device-width: 991px) { 
+    /* STYLES HERE */
+    .about-imgs .middle-img {
+        width:200px !important;
+    }
+    .about-imgs .top-img {
+        width:200px !important;
+    }
+    .about-imgs .bottom-img {
+        width:150px !important;
+    }
 }
 
 @media(max-width:635px){
@@ -254,7 +273,7 @@ ul{
 }
 
 
-@media(max-width:768px){
+@media(max-width:767px){
     .get-in-touch-img{
         display: none;
     }
@@ -290,7 +309,7 @@ ul{
     font-size: 12px;
     font-weight: 300;
 }
-@media(max-width:768px){
+@media(max-width:767px){
     .footer{
         position: relative;
     }
