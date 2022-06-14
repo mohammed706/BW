@@ -45,6 +45,7 @@ const Touch = () => {
       .finally(() => {
         setName(""), setEmail(""), setSubject(""), setMessage("");
       });
+    return;
   };
   return (
     <section id="contact" className="">

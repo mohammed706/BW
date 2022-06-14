@@ -42,7 +42,6 @@ const Projects = () => {
                         to="/projects"
                         className="btn rounded-pill main-btn mt-3"
                       >
-                        {" "}
                         View More
                       </NavLink>
                     </div>
@@ -55,7 +54,7 @@ const Projects = () => {
     );
   };
   return (
-    <div>
+    <div id="projects">
       <div className="container">
         <div className="projects-header text-center mx-auto my-5">
           <h1 className="projects-title mb-2">
@@ -69,7 +68,7 @@ const Projects = () => {
           </h6>
         </div>
       </div>
-      <div className="row justify-content-center">{<ShowProjects />}</div>
+      <div className="row  m-0">{<ShowProjects />}</div>
     </div>
   );
 };

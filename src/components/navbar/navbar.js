@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../images/logo/bw-logo.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 const NavBar = () => {
   return (
     <>
@@ -33,37 +34,36 @@ const NavBar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <a
+                <HashLink
                   className="nav-link p-2 p-lg-3 text-black-50"
-                  href="#services"
+                  to="/#services"
                 >
                   Services
-                </a>
+                </HashLink>
               </li>
               <li className="nav-item">
-                <Link
+                <HashLink
                   className="nav-link p-2 p-lg-3 text-black-50"
-                  to="/projects"
-                  target="_blank"
+                  to="/projects#projects"
                 >
                   Projects
-                </Link>
+                </HashLink>
               </li>
               <li className="nav-item">
-                <a
+                <HashLink
                   className="nav-link p-2 p-lg-3 text-black-50"
-                  href="#about-us"
+                  to="/#about-us"
                 >
                   About
-                </a>
+                </HashLink>
               </li>
               <li className="nav-item">
-                <a
+                <HashLink
                   className="nav-link p-2 p-lg-3 text-black-50"
-                  href="#contact"
+                  to="/#contact"
                 >
                   Contact
-                </a>
+                </HashLink>
               </li>
             </ul>
             <a className="btn rounded-pill main-btn" href="#">

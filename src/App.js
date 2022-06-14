@@ -14,8 +14,8 @@ import Projects from "./components/projects/Projects";
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <Route exact path="/">
-        <NavBar />
         <Landing />
         <Doing />
         <About />
