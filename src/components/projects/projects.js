@@ -24,7 +24,7 @@ const Projects = () => {
           data.map((item) => {
             return (
               <>
-                <div className="col-md-3 col-sm-6 mb-4">
+                <div className="col-md-4 col-sm-6 mb-4">
                   <div
                     className="card h-100 text-center p-4 shadow"
                     key={item.id}
@@ -36,7 +36,12 @@ const Projects = () => {
                       height="250px"
                     />
                     <div className="card-body">
-                      <h5 className="card-title mb-0">{item.name}</h5>
+                      <h5
+                        className="card-title mb-0 gray-text"
+                        style={{ fontFamily: "Poppins" }}
+                      >
+                        {item.name}
+                      </h5>
 
                       <NavLink
                         to="/projects"

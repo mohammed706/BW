@@ -25,13 +25,13 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="main">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link
+                <HashLink
                   className="nav-link p-2 p-lg-3 text-black-50 active"
                   aria-current="page"
-                  to="/"
+                  to="/#landing"
                 >
                   Home
-                </Link>
+                </HashLink>
               </li>
               <li className="nav-item">
                 <HashLink

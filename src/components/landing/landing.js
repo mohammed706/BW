@@ -1,7 +1,10 @@
 const Landing = () => {
   return (
     <>
-      <div className="landing d-flex justify-content-center align-items-center">
+      <div
+        className="landing d-flex justify-content-center align-items-center"
+        id="landing"
+      >
         <div className="text-center text-light">
           <h1>Business World</h1>
           <p className="fs-6 mb-4 mx-auto">
